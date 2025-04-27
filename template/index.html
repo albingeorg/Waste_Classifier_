@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+    <style>
+      body {
+        background-image: url('background.jpg'); /* Replace 'background.jpg' with the path to your background image */
+        background-size: cover; /* Adjusts the background image size to cover the entire viewport */
+        background-repeat: no-repeat; /* Prevents the background image from repeating */
+        font-family: 'Roboto', sans-serif; /* Optional: Define font family */
+        color: #ff6f61; /* Set default text color to white */
+      }
+
+      h3 {
+        color: #ff6f61; /* Set color of "Image Classification" to a specific color */
+      }
+
+      #result {
+        color: #ff6f61; /* Set text color of the words that appear when probability is shown */
+      }
+      nav{
+    width: 81%;
+    position: relative;
+    top: 0;
+    left: 0; 
+    padding: 20px 8%;
+    display: flex; 
+    align-items: center; 
+    Justify-content: space-between;
+}
+nav .logo{
+    width: 80px;
+        
+} 
+nav ul li{ 
+    list-style: none; 
+    display: inline-block; 
+    margin-left: 40px;
+    
+} 
+nav ul li a{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+      /* Other CSS styles can be added here */
+    </style>
+
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet@2.0.2"></script>
+  </head>
+  <body>
+    <nav> 
+      <img src="Logo_Trash.PNG" alt="Logo" style="width: 300px; height: 70px;">
+
+      <ul>
+          <li><a href="home.html">HOME</a></li>
+           
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>                
+          <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>
+    <div class="content">
+      <h3>Image Classification</h3>
+      <div class="divider"></div>
+
+      <div id="loading">Loading...</div>
+
+      <div class="row fluid-container">
+        <div class="col-fluid">
+          <input id='file-input' type='file' hidden />
+          <button id="classify-image" class="animated loading loading-left">Classify Picture</button>
+          
+          <div id="preview-image"></div>
+          <div id="result"></div>
+        </div>
+        <div class="col-fluid">
+          <button id="classify-webcam" class="animated loading loading-left">Classify Webcam</button>
+      
+          <div id="console"></div>
+          <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load index.js after the content of the page -->
+    <script src="index.js"></script>
+  </body>
+</html>

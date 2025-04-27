@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('team.jpg'); /* Add background image */
+            background-size: cover; /* Adjusts the background image size to cover the entire viewport */
+            background-repeat: no-repeat; /* Prevents the background image from repeating */
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Add semi-transparent white background to container */
+            border-radius: 10px; /* Add border radius to container */
+            padding: 20px;
+        }
+        .member {
+            margin-bottom: 30px;
+            display: flex; /* Use flexbox layout */
+            align-items: center; /* Center items vertically */
+        }
+        .member img {
+            width: 150px; /* Set fixed width for images */
+            height: 150px; /* Set fixed height for images */
+            border-radius: 50%; /* Make the image round */
+            margin-right: 20px; /* Add space between image and description */
+        }
+        .member-details {
+            flex: 1; /* Expand to fill remaining space */
+        }
+        h2 {
+            text-align: center;
+            color: #3cb105b7;
+        }
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+        nav{
+    width: 81%;
+    position: relative;
+    top: 0;
+    left: 0; 
+    padding: 20px 8%;
+    display: flex; 
+    align-items: center; 
+    Justify-content: space-between;
+}
+nav .logo{
+    width: 80px;
+        
+} 
+nav ul li{ 
+    list-style: none; 
+    display: inline-block; 
+    margin-left: 40px;
+    
+} 
+nav ul li a{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+    </style>
+</head>
+<body>
+    <nav> 
+        <img src="Logo_Trash.PNG" alt="Logo" style="width: 300px; height: 70px;">
+  
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+             
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>                
+            <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    
+    <div class="container">
+        <h2>Our Team</h2>
+
+        <div class="member">
+            <img src="Vaibhav.jpeg" alt="Member 1">
+            <div class="member-details">
+                <h3>Vaibhav Gupta</h3>
+                <p>Have done the backend of the project basically made a model for garbage classification</p>
+            </div>
+        </div>
+
+        <div class="member">
+            <img src="albin.jpeg" alt="Member 2">
+            <div class="member-details">
+                <h3>Albin George</h3>
+                <p>Made the GUI of the project and helped in integrating the frontend with backend</p>
+            </div>
+        </div>
+
+        <div class="member">
+            <img src="Shatakshi.jpeg" alt="Member 3">
+            <div class="member-details">
+                <h3>Shatakshi Srivastava</h3>
+                <p>Made the dashboard of the garbage collection of a small town to understand what types of garbage are being collected. </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
